@@ -1,0 +1,30 @@
+{
+  "entrances": ["gate-east"],
+  "passages": [
+    {"code": "p-pk-ge", "from": "parking-lot", "to": "gate-east", "kind": "walk", "special": false},
+    {"code": "p-ge-wf", "from": "gate-east", "to": "waterfall", "kind": "walk", "special": false},
+    {"code": "p-ge-ex", "from": "gate-east", "to": "exit-plaza", "kind": "walk", "special": true},
+    {"code": "p-wf-sn", "from": "waterfall", "to": "shuttle-north", "kind": "walk", "special": false},
+    {"code": "p-sn-ex", "from": "shuttle-north", "to": "exit-plaza", "kind": "walk", "special": false}
+  ],
+  "shuttle_lines": [
+    {
+      "code": "north",
+      "name": "北环线",
+      "stations": ["shuttle-north", "exit-plaza"],
+      "normal_per_interval": 300,
+      "boost_per_interval": 520,
+      "interval_seconds": 900
+    }
+  ],
+  "sources": {
+    "gate":    {"kind": "flow",      "staleness_seconds": 180, "description": "闸机进出双向计数"},
+    "camera":  {"kind": "occupancy", "staleness_seconds": 300, "description": "图像区域人数快照"},
+    "parking": {"kind": "flow",      "staleness_seconds": 600, "lead_seconds": 900,  "description": "停车区入场计数"},
+    "ticket":  {"kind": "lead",      "staleness_seconds": 900, "lead_seconds": 1800, "description": "线上分时票预订"},
+    "shuttle": {"kind": "flow",      "staleness_seconds": 300, "description": "摆渡车到发计数"}
+  },
+  "thresholds": {"yellow": 0.70, "orange": 0.85, "red": 0.95},
+  "recovery": {"step_seconds": 300, "min_release": 40, "release_steps": 4},
+  "closure": {"opening_time": "07:00", "closing_time": "20:00", "return_guarantee_seconds": 3600}
+}
