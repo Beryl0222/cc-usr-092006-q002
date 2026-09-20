@@ -1,5 +1,5 @@
 [
-  {"code":"gate-east","name":"东入口","fire_capacity":900,"sources":["gate","parking"]},
-  {"code":"waterfall","name":"瀑布核心区","fire_capacity":1800,"sources":["gate","camera"]},
-  {"code":"shuttle-north","name":"北线摆渡站","fire_capacity":420,"sources":["shuttle","camera"]}
+  {"code":"gate-east","name":"东入口","fire_capacity":900,"sources":["gate","parking"],"special_lanes":2},
+  {"code":"waterfall","name":"瀑布核心区","fire_capacity":1800,"sources":["gate","camera"],"special_lanes":1},
+  {"code":"shuttle-north","name":"北线摆渡站","fire_capacity":420,"sources":["shuttle","camera"],"special_lanes":1}
 ]

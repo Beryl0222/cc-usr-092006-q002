@@ -1,0 +1,6 @@
+[
+  {"src":"gate-east","dst":"waterfall","kind":"walk","capacity_per_min":120,"code":"walk-river"},
+  {"src":"gate-east","dst":"shuttle-north","kind":"shuttle","capacity_per_min":80,"code":"shuttle-n-line"},
+  {"src":"shuttle-north","dst":"waterfall","kind":"walk","capacity_per_min":60,"code":"walk-north"},
+  {"src":"waterfall","dst":"gate-east","kind":"shuttle","capacity_per_min":100,"code":"shuttle-return"}
+]
